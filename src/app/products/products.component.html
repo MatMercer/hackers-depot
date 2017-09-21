@@ -1,3 +1,6 @@
-<p>
-  products works!
-</p>
+<div class="products-list">
+  <div class="product-border" *ngFor="let prod of products; let i = index">
+    <app-product [product]="prod"></app-product>
+    <hr *ngIf="i + 1 !== products.length">
+  </div>
+</div>

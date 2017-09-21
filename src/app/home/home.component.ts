@@ -8,7 +8,7 @@ import {sampleProducts} from "../products/products.component";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  homeProduct: Product = sampleProducts[0];
+  homeProduct: Product = sampleProducts[Math.floor(Math.random() * sampleProducts.length)];
 
   constructor() { }
 
