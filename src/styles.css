@@ -79,12 +79,16 @@ footer {
   margin: 16px 0 48px 0;
 }
 
-footer > span {
+footer > span.trademark > span {
   padding: 0 5px 0 5px;
 }
 
-footer > span:last-child {
+footer > span.made-with-love {
   float: right;
+}
+
+footer > span.trademark {
+  float: left;
 }
 
 /* PRODUCTS */

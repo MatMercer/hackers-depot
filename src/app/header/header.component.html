@@ -6,6 +6,7 @@
     </span>
   </a>
   <span class="menu-container">
+      <span *ngIf="widthLessThan(1025)" class="vertical-divider"></span>
       <span><a routerLink="home" [routerLinkActive]="['active']">Home</a></span>
       <span class="vertical-divider"></span>
       <span><a routerLink="products" [routerLinkActive]="['active']">Products</a></span>
