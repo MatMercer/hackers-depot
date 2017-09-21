@@ -5,4 +5,10 @@
     <span class="price">${{this.product.price}}</span>
   </div>
   <p>{{this.product.desc}}</p>
+  <h2 class="warn">History and Info</h2>
+  <p>{{this.product.history}}</p>
+  <h2 class="warn">Video</h2>
+</div>
+<div class="product-video">
+  <iframe class="product-video" height="480" [src]="'https://www.youtube.com/embed/' + product.youtubeId | safeUrl" frameborder="0" allowfullscreen></iframe>
 </div>

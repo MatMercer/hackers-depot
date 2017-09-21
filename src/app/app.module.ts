@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
+import {NgModule, Pipe, PipeTransform} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './products/product/product.component';
+import { ProductInfoComponent } from './products/product-info/product-info.component';
 
 
 export const routerConfig: Routes = [
@@ -23,6 +24,10 @@ export const routerConfig: Routes = [
     path: 'products',
     component: ProductsComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'product/:id',
+    component: ProductInfoComponent
   },
   {
     path: 'signup',
@@ -51,6 +56,16 @@ export const routerConfig: Routes = [
   }
 ];
 
+/* From https://stackoverflow.com/a/38037914/7308020 */
+@Pipe({name: 'safeUrl'})
+export class SafeUrlPipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) {
+  }
+
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
 
 // export const routerConfig: Routes = [
 //   {
@@ -87,7 +102,9 @@ export const routerConfig: Routes = [
     SignUpComponent,
     LoginComponent,
     ContactComponent,
-    ProductComponent
+    ProductComponent,
+    ProductInfoComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,

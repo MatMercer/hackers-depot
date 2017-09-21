@@ -102,6 +102,16 @@ div.product > .img-container > span.price {
   color: #2DC7C7;
 }
 
+div.product-video {
+  width: 90%;
+  max-width: 854px;
+  margin: auto;
+}
+
+div.product-video > iframe.product-video {
+  width: 100%;
+}
+
 /* HOME */
 div.home > .welcome-message, .home-content {
   width: 80%;
