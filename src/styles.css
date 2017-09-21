@@ -43,6 +43,7 @@ nav > span.menu-container {
   position: absolute;
   bottom: 0;
   right: 0;
+  padding-left: 200px;
 }
 
 nav > span.menu-container > span {
@@ -81,6 +82,10 @@ footer {
 
 footer > span.trademark > span {
   padding: 0 5px 0 5px;
+}
+
+footer > span.trademark > span:nth-child(1) {
+  padding: 0 5px 0 0;
 }
 
 footer > span.made-with-love {
