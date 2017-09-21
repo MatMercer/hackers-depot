@@ -14,7 +14,7 @@ body {
 }
 
 p {
-  line-height: 120%;
+  line-height: 140%;
 }
 
 /* LINKS */
@@ -53,6 +53,11 @@ nav > span.menu-container > span > a {
   color: white;
 }
 
+nav > span.menu-container > span > a.active {
+  color: #2DC7C7;
+  text-decoration: underline;
+}
+
 nav > span.menu-container > span > a:hover {
   color: #65E868;
 }
@@ -72,7 +77,6 @@ nav > a.logo-container {
 div.product {
   width: 50%;
   margin: 15px auto 15px auto;
-  border: 1px solid white;
 }
 
 div.product > h2 {
@@ -95,13 +99,13 @@ div.product > .img-container > span.price {
   text-decoration: underline;
   font-weight: bolder;
   text-shadow: black 2px 2px 2px;
-  color: #FF3A3A;
+  color: #2DC7C7;
 }
 
 /* HOME */
-div.home > .welcome-message {
+div.home > .welcome-message, .home-content {
   width: 80%;
-  margin: 15px auto 15px auto;
+  margin: 15px auto 60px auto;
 }
 
 /* CUSTOM UTILS CLASSES */
@@ -110,6 +114,10 @@ div.home > .welcome-message {
 }
 
 .active {
-  color: #65E868;
+  color: #2DC7C7;
+}
+
+.warn {
+  color: #eeca40;
 }
 
