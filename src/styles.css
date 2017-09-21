@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+/* GLOBAL */
+body {
+  margin: 0 auto 0 auto;
+  background-color: #020502;
+  color: rgb(246, 255, 241);
+  font-family: Hack, sans-serif;
+  font-size: 19px;
+  max-width: 1024px;
+}
+
+/* LINKS */
+a {
+  color: #65E868;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #65E868;
+  text-decoration: underline;
+}
+
+/* NAVBAR */
+nav {
+  margin-top: 48px;
+  position: relative;
+  border-bottom: 1px solid white;
+}
+
+nav > img {
+  right: 100px;
+}
+
+nav > span.menu-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+nav > span.menu-container > span {
+  padding: 0 5px 0 5px;
+}
+
+nav > span.menu-container > span > a {
+  color: white;
+}
+
+nav > span.menu-container > span > a:hover {
+  color: #65E868;
+}
+
+nav > a.logo-container {
+  display: inline;
+  color: #F6FFF1;
+  text-decoration: none;
+  font-size: 33px;
+  font-family: sans-serif;
+  word-wrap: break-word;
+  padding: 0;
+  font-weight: bolder;
+}
+
+/* CUSTOM UTILS CLASSES */
+.vertical-divider {
+  border-left: 1px solid white;
+}
+
