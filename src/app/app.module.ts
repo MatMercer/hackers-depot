@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './products/product/product.component';
 import { ProductInfoComponent } from './products/product-info/product-info.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 export const routerConfig: Routes = [
@@ -104,7 +105,8 @@ export class SafeUrlPipe implements PipeTransform {
     ContactComponent,
     ProductComponent,
     ProductInfoComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -73,6 +73,20 @@ nav > a.logo-container {
   font-weight: bolder;
 }
 
+/* FOOTER */
+footer {
+  border-top: 1px solid white;
+  margin: 16px 0 48px 0;
+}
+
+footer > span {
+  padding: 0 5px 0 5px;
+}
+
+footer > span:last-child {
+  float: right;
+}
+
 /* PRODUCTS */
 div.product {
   width: 60%;
