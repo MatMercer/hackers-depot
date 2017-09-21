@@ -72,14 +72,44 @@ nav > a.logo-container {
 div.product {
   width: 50%;
   margin: 15px auto 15px auto;
+  border: 1px solid white;
 }
 
-div.product > img{
+div.product > h2 {
+  color: #65E868;
+}
+
+div.product > .img-container {
+  position: relative;
+}
+
+div.product > .img-container > img {
   max-width: 100%;
+}
+
+div.product > .img-container > span.price {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 44px;
+  text-decoration: underline;
+  font-weight: bolder;
+  text-shadow: black 2px 2px 2px;
+  color: #FF3A3A;
+}
+
+/* HOME */
+div.home > .welcome-message {
+  width: 80%;
+  margin: 15px auto 15px auto;
 }
 
 /* CUSTOM UTILS CLASSES */
 .vertical-divider {
   border-left: 1px solid white;
+}
+
+.active {
+  color: #65E868;
 }
 
