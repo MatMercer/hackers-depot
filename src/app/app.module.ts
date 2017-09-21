@@ -10,6 +10,7 @@ import { ProductsComponent } from './products/products.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductComponent } from './products/product/product.component';
 
 
 export const routerConfig: Routes = [
@@ -39,8 +40,13 @@ export const routerConfig: Routes = [
     pathMatch: 'full'
   },
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
-    redirectTo: '/',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];
@@ -80,7 +86,8 @@ export const routerConfig: Routes = [
     ProductsComponent,
     SignUpComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
