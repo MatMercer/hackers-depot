@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './products/product/product.component';
 import { ProductInfoComponent } from './products/product-info/product-info.component';
 import { FooterComponent } from './footer/footer.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 export const routerConfig: Routes = [
@@ -110,7 +111,9 @@ export class SafeUrlPipe implements PipeTransform {
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routerConfig)
+    RouterModule.forRoot(routerConfig),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

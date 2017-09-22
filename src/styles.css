@@ -141,6 +141,76 @@ div.home > .welcome-message, .home-content {
   margin: 15px auto 60px auto;
 }
 
+/* FORMS */
+form {
+  width: 100%;
+}
+
+form > .form-group {
+  width: 100%;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+form > .form-group > input {
+  font-size: 20px;
+  width: 100%;
+  margin: 8px 0 0 0;
+  background-color: transparent;
+  color: #F6FFF1;
+  border: solid white;
+  border-width: 0 0 1px 0;
+  outline: none;
+}
+
+form > .form-group > label {
+  font-size: 25px;
+  margin-bottom: 100px;
+  font-weight: bold;
+}
+
+form > .form-group > button.submit{
+  font-size: 25px;
+  background: none;
+}
+
+
+form > .form-group > button.submit {
+  outline: none;
+  background-color: transparent;
+  color: #2DC7C7;
+  cursor: pointer;
+  border: solid white 1px;
+  font-weight: bold;
+  float: right;
+}
+
+form > .form-group > button.submit:hover {
+  text-decoration: underline;
+}
+
+form > .form-group > button[disabled] {
+  color: grey;
+}
+
+form > .form-group > .error-message{
+  color: #FF2B2B;
+  font-size: 16px;
+}
+
+.form-group.has-error > input {
+  border: solid #FF2B2B;
+  border-width: 0 0 1px 0;
+}
+
+/* LOGIN */
+div.form-container {
+  max-width: 368px;
+  width: 100%;
+
+  margin: 32px auto 32px auto;
+}
+
 /* CUSTOM UTILS CLASSES */
 .vertical-divider {
   border-left: 1px solid white;
