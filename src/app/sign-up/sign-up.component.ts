@@ -6,7 +6,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent{
+export class SignUpComponent {
   protected signupForm: FormGroup;
 
   constructor(fb: FormBuilder) {
@@ -14,7 +14,7 @@ export class SignUpComponent{
       'first-name' : [null, Validators.compose([Validators.required, Validators.minLength(2)])],
       'last-name' : [null, Validators.compose([Validators.required, Validators.minLength(2)])],
       'email' : [null, Validators.compose([Validators.required, Validators.email])],
-      'password' : [null, Validators.required]
+      'password' : [null, Validators.compose([Validators.required, Validators.minLength(6)])]
     });
   }
 
