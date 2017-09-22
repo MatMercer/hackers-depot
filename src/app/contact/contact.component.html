@@ -1,3 +1,31 @@
-<p>
-  contact works!
-</p>
+<div class="form-container">
+  <form [formGroup]="contactForm" (ngSubmit)="contact(contactForm.value)">
+    <div class="form-group" [ngClass]="{'has-error': contactForm.controls['email'].invalid && contactForm.controls['email'].touched}">
+      <label>Email:</label>
+      <input placeholder="mateusmercer@gmail.com" type="email" [formControl]="contactForm.controls['email']">
+      <div *ngIf="contactForm.controls['email'].hasError('required') && contactForm.controls['email'].touched"
+           class="error-message">
+        Please insert your Email.
+      </div>
+      <div *ngIf="contactForm.controls['email'].hasError('email') && contactForm.controls['email'].touched"
+           class="error-message">
+        Invalid Email.
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error': contactForm.controls['message'].invalid && contactForm.controls['message'].touched}">
+      <label>Message:</label>
+      <textarea [formControl]="contactForm.controls['message']"></textarea>
+      <div *ngIf="contactForm.controls['message'].hasError('required') && contactForm.controls['message'].touched"
+           class="error-message">
+        Please insert your message.
+      </div>
+      <div *ngIf="contactForm.controls['message'].hasError('minlength') && contactForm.controls['message'].touched"
+           class="error-message">
+        Invalid message. It must have at least 16 characters.
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="submit" type="submit" [disabled]="contactForm.invalid">Contact</button>
+    </div>
+  </form>
+</div>

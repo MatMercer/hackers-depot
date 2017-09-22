@@ -163,13 +163,24 @@ form > .form-group > input {
   outline: none;
 }
 
+form > .form-group > textarea {
+  font-size: 20px;
+  width: 362px;
+  margin: 8px 0 0 0;
+  background-color: transparent;
+  color: #F6FFF1;
+  border: 1px solid white;
+  outline: none;
+  resize: none;
+}
+
 form > .form-group > label {
   font-size: 25px;
   margin-bottom: 100px;
   font-weight: bold;
 }
 
-form > .form-group > button.submit{
+form > .form-group > button.submit {
   font-size: 25px;
   background: none;
 }
@@ -201,6 +212,10 @@ form > .form-group > .error-message{
 .form-group.has-error > input {
   border: solid #FF2B2B;
   border-width: 0 0 1px 0;
+}
+
+.form-group.has-error > textarea {
+  border: 1px solid #FF2B2B;
 }
 
 /* LOGIN */
