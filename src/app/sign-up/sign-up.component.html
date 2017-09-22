@@ -1,3 +1,51 @@
-<p>
-  sign-up works!
-</p>
+<div class="form-container">
+  <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
+    <div class="form-group" [ngClass]="{'has-error': signupForm.controls['first-name'].invalid && signupForm.controls['first-name'].touched}">
+      <label>First Name:</label>
+      <input placeholder="Mateus" type="text" [formControl]="signupForm.controls['first-name']">
+      <div *ngIf="signupForm.controls['first-name'].hasError('required') && signupForm.controls['first-name'].touched"
+           class="error-message">
+        Please insert your first name.
+      </div>
+      <div *ngIf="signupForm.controls['first-name'].hasError('minlength') && signupForm.controls['first-name'].touched"
+           class="error-message">
+        Invalid first name. It must have at least 2 characters.
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error': signupForm.controls['last-name'].invalid && signupForm.controls['last-name'].touched}">
+      <label>Last Name:</label>
+      <input placeholder="Mercer" type="text" [formControl]="signupForm.controls['last-name']">
+      <div *ngIf="signupForm.controls['last-name'].hasError('required') && signupForm.controls['last-name'].touched"
+           class="error-message">
+        Please insert your last name.
+      </div>
+      <div *ngIf="signupForm.controls['last-name'].hasError('minlength') && signupForm.controls['last-name'].touched"
+           class="error-message">
+        Invalid last name. It must have at least 2 characters.
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error': signupForm.controls['email'].invalid && signupForm.controls['email'].touched}">
+      <label>Email:</label>
+      <input placeholder="mateusmercer@gmail.com" type="email" [formControl]="signupForm.controls['email']">
+      <div *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].touched"
+           class="error-message">
+        Please insert your Email.
+      </div>
+      <div *ngIf="signupForm.controls['email'].hasError('email') && signupForm.controls['email'].touched"
+           class="error-message">
+        Invalid Email.
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error': signupForm.controls['password'].invalid && signupForm.controls['password'].touched}">
+      <label>Password:</label>
+      <input placeholder="******" type="password" [formControl]="signupForm.controls['password']">
+      <div *ngIf="signupForm.controls['password'].hasError('required') && signupForm.controls['password'].touched"
+           class="error-message">
+        Please insert your password.
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="submit" type="submit" [disabled]="signupForm.invalid">Signup</button>
+    </div>
+  </form>
+</div>
