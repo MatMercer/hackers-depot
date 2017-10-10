@@ -13,7 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './products/product/product.component';
 import { ProductInfoComponent } from './products/product-info/product-info.component';
 import { FooterComponent } from './footer/footer.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CookieService} from 'ngx-cookie-service';
 
 
 export const routerConfig: Routes = [
@@ -115,7 +116,9 @@ export class SafeUrlPipe implements PipeTransform {
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

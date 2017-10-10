@@ -1,8 +1,4 @@
 /* GLOBAL */
-* {
-  transition: 100ms;
-}
-
 body {
   margin: 0 auto 0 auto;
   background-color: #020502;
@@ -10,6 +6,7 @@ body {
   font-family: Hack, sans-serif;
   font-size: 19px;
   max-width: 1024px;
+  transition: 100ms;
 }
 
 *::selection {
