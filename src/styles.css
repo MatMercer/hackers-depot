@@ -1,4 +1,8 @@
 /* GLOBAL */
+* {
+  transition: 100ms;
+}
+
 body {
   margin: 0 auto 0 auto;
   background-color: #020502;
@@ -239,3 +243,122 @@ div.form-container {
   color: #eeca40 !important;
 }
 
+/* DARK THEME */
+
+/* GLOBAL */
+body.light {
+  background-color: #eaf1ea;
+  color: rgb(7, 9, 7);
+}
+
+.light *::selection {
+  color: white;
+  background: black;
+}
+
+/* LINKS */
+.light * > a {
+  color: #285a28;
+  text-decoration: none;
+}
+
+.light * > a:hover {
+  color: #4cae4d;
+  text-decoration: underline;
+}
+
+/* NAVBAR */
+.light * > nav {
+  border-bottom: 1px solid black;
+}
+
+.light * > nav > span.menu-container > span > a {
+  color: black;
+}
+
+.light * > nav > span.menu-container > span > a.active {
+  color: #24a0a0;
+  text-decoration: underline;
+}
+
+.light * > nav > span.menu-container > span > a:hover {
+  color: #357d35;
+}
+
+.light * > nav > a.logo-container {
+  color: #060906;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.light * > footer {
+  border-top: 1px solid black;
+}
+
+/* PRODUCTS */
+.light * > div.product > h2 {
+  color: #376f37;
+}
+
+/* FORMS */
+.light * > form > .form-group > input {
+  background-color: transparent;
+  color: #040504;
+  border: solid #040404;
+  border-width: 0 0 1px 0;
+  outline: none;
+}
+
+.light * > form > .form-group > textarea {
+  background-color: transparent;
+  color: #060606;
+  border: 1px solid #050505;
+  outline: none;
+  resize: none;
+}
+
+.light * > form > .form-group > button.submit {
+  outline: none;
+  background-color: transparent;
+  color: #1d7a7a;
+  cursor: pointer;
+  border: solid #000000 1px;
+  font-weight: bold;
+  float: right;
+}
+
+.light * > form > .form-group > button[disabled] {
+  color: #383838;
+}
+
+.light * > form > .form-group > .error-message{
+  color: #FF2B2B;
+  font-size: 16px;
+}
+
+.light * > .form-group.has-error > input {
+  border: solid #FF2B2B;
+  border-width: 0 0 1px 0;
+}
+
+.light * > .form-group.has-error > textarea {
+  border: 1px solid #FF2B2B;
+}
+
+/* CUSTOM UTILS CLASSES */
+.light * > .vertical-divider {
+  border-left: 1px solid black;
+}
+
+.light * > .active {
+  color: #196666;
+}
+
+.light * > .warn {
+  color: #d1b038 !important;
+}
+
+.light * > hr {
+  border-color: black;
+  border-width: 0.5px;
+}
