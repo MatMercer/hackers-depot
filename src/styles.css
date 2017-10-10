@@ -6,7 +6,7 @@ body {
   font-family: Hack, sans-serif;
   font-size: 19px;
   max-width: 1024px;
-  transition: 100ms;
+  transition: 200ms;
 }
 
 *::selection {
