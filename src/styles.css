@@ -136,6 +136,21 @@ div.product-video > iframe.product-video {
   width: 100%;
 }
 
+div.product > a.cart {
+  cursor: pointer;
+  user-select: none;
+  font-size: 300%;
+}
+
+div.product > a.cart.add {
+  color: #2DC7C7;
+  float: right;
+}
+
+div.product > a.cart.remove {
+  color: #ed2b1f;
+}
+
 /* HOME */
 div.home > .welcome-message, .home-content {
   width: 80%;
@@ -295,6 +310,10 @@ body.light {
 /* PRODUCTS */
 .light * > div.product > h2 {
   color: #376f37;
+}
+
+.light * > div.product > a.cart.add {
+  color: #259191;
 }
 
 /* FORMS */

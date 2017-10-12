@@ -15,6 +15,8 @@ import { ProductInfoComponent } from './products/product-info/product-info.compo
 import { FooterComponent } from './footer/footer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CookieService} from 'ngx-cookie-service';
+import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
+import {ShoppingcartService} from './shoppingcart/shoppingcart.service';
 
 
 export const routerConfig: Routes = [
@@ -108,7 +110,8 @@ export class SafeUrlPipe implements PipeTransform {
     ProductComponent,
     ProductInfoComponent,
     SafeUrlPipe,
-    FooterComponent
+    FooterComponent,
+    ShoppingcartComponent
   ],
   imports: [
     BrowserModule,
@@ -117,7 +120,8 @@ export class SafeUrlPipe implements PipeTransform {
     ReactiveFormsModule
   ],
   providers: [
-    CookieService
+    CookieService,
+    ShoppingcartService
   ],
   bootstrap: [AppComponent]
 })
