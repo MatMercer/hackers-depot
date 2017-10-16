@@ -9,9 +9,9 @@ import {ShoppingcartService} from '../shoppingcart/shoppingcart.service';
   styleUrls: ['./product-cart-list.component.css']
 })
 export class ProductCartListComponent implements OnInit {
-  protected products: Product[] = sampleProducts;
+  products: Product[] = sampleProducts;
 
-  constructor(protected shopService: ShoppingcartService) { }
+  constructor(public shopService: ShoppingcartService) { }
 
   ngOnInit() {
   }

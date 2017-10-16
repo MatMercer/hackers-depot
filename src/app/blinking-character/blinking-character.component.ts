@@ -11,7 +11,7 @@ export class BlinkingCharacterComponent implements OnInit {
   @Input() delay: number;
 
   private currentIndex = 0;
-  protected currentChar: string;
+  currentChar: string;
 
   constructor() { }
 

@@ -10,8 +10,8 @@ import {ShoppingcartService} from '../../shoppingcart/shoppingcart.service';
   styleUrls: ['./product-info.component.css']
 })
 export class ProductInfoComponent implements OnInit, OnDestroy {
-  protected product: Product;
-  protected sub: any;
+  product: Product;
+  sub: any;
 
   constructor(private route: ActivatedRoute, private shopService: ShoppingcartService) { }
 

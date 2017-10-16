@@ -83,7 +83,7 @@ export const sampleProducts: Product[] = [
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  protected products: Product[] = sampleProducts;
+  products: Product[] = sampleProducts;
 
   constructor() {
   }

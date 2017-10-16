@@ -7,7 +7,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent {
-  protected signupForm: FormGroup;
+  signupForm: FormGroup;
 
   constructor(fb: FormBuilder) {
     this.signupForm = fb.group({

@@ -7,7 +7,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  protected contactForm: FormGroup;
+  contactForm: FormGroup;
 
   constructor(fb: FormBuilder) {
     this.contactForm = fb.group({
