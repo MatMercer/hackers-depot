@@ -3,7 +3,7 @@
   <a class="cart remove" (click)="removeProduct(product)">-</a>
   <a class="cart add" (click)="addProduct(product)">+</a>
   <div class="img-container">
-    <img class="product-img" [src]="'../../assets/vendor/' + this.product.imageName" [alt]="this.product.name" [title]="this.product.name">
+    <img class="product-img" [src]="'./assets/vendor/' + this.product.imageName" [alt]="this.product.name" [title]="this.product.name">
     <span class="price">${{this.product.price}}</span>
   </div>
   <p>{{this.product.desc}}</p>
