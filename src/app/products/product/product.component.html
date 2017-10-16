@@ -3,7 +3,9 @@
   <a class="cart remove" (click)="removeProduct(product)">-</a>
   <a class="cart add" (click)="addProduct(product)">+</a>
   <div class="img-container">
-    <img [src]="'../../assets/vendor/' + this.product.imageName" [alt]="this.product.name" [title]="this.product.name">
+    <a [routerLink]="['/product', product.id]">
+    <img class="product-img" [src]="'../../assets/vendor/' + this.product.imageName" [alt]="this.product.name" [title]="this.product.name">
+    </a>
     <span class="price">${{this.product.price}}</span>
   </div>
   <p>{{this.product.desc}}</p>

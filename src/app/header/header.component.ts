@@ -44,6 +44,6 @@ export class HeaderComponent implements OnInit {
 
     this.currentTheme = this.avaibleThemes[thmIndx];
     this.renderer.addClass(document.body, this.currentTheme);
-    this.cookieService.set('theme', this.currentTheme);
+    this.cookieService.set('theme', this.currentTheme, 180);
   }
 }

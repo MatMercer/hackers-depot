@@ -68,5 +68,17 @@ export class ShoppingcartService {
       this._productChangeEvent.next(this._selectedProducts);
     }
   }
+
+  public hasProduct(product: Product): boolean {
+    const idx = this._selectedProducts.indexOf(product);
+    return idx >= 0;
+  }
+
+  public clearSelectedProducts() {
+    this._selectedProducts = [];
+    this.saveCookies();
+
+    this._productChangeEvent.next(this._selectedProducts);
+  }
 }
 

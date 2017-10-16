@@ -1,0 +1,17 @@
+<div class="products-list">
+  <div *ngIf="shopService.selectedProducts.length < 1; else productList" class="cart-header">
+    <h1>
+      No Products in the cart :( <a [routerLink]="['/products']">Go to Products</a>
+    </h1>
+  </div>
+
+  <ng-template #productList>
+    <div class="cart-clear">
+      <h1><a (click)="shopService.clearSelectedProducts()" class="error">Clear Cart</a></h1>
+    </div>
+    <div class="product-border" *ngFor="let prod of shopService.selectedProducts; let i = index">
+      <app-product [product]="prod"></app-product>
+      <hr *ngIf="i + 1 !== shopService.selectedProducts.length">
+    </div>
+  </ng-template>
+</div>

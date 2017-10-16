@@ -52,10 +52,10 @@ export const sampleProducts: Product[] = [
     id: 3,
     name: 'Polybius',
     desc: ':)',
-    history: '...',
+    history: 'Creepy stuff.',
     imageName: 'polybius.jpg',
     youtubeId: 'h1ccH97j63o',
-    price: null
+    price: 0.01
   },
   {
     id: 4,

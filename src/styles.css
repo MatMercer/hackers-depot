@@ -9,6 +9,10 @@ body {
   transition: 200ms;
 }
 
+a {
+  cursor: pointer;
+}
+
 *::selection {
     color: black;
     background: white;
@@ -111,7 +115,7 @@ div.product > .img-container {
   position: relative;
 }
 
-div.product > .img-container > img {
+.product-img {
   max-width: 100%;
 }
 
@@ -242,6 +246,12 @@ div.form-container {
   margin: 32px auto 32px auto;
 }
 
+/* SHOPPING CART */
+.cart-clear {
+  width: 60%;
+  margin: 16px auto;
+}
+
 /* CUSTOM UTILS CLASSES */
 .vertical-divider {
   border-left: 1px solid white;
@@ -253,6 +263,10 @@ div.form-container {
 
 .warn {
   color: #eeca40 !important;
+}
+
+.error {
+  color: #FF2B2B !important;
 }
 
 /* DARK THEME */
