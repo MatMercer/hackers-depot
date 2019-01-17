@@ -1,4 +1,8 @@
-# AngularHackersDepot
+[https://matmercer.github.io/hackers-depot/](https://matmercer.github.io/hackers-depot/)
+
+[![Hackers Depot](https://media.giphy.com/media/XtdMMR4TyC14bLg8hL/giphy.gif)](https://matmercer.github.io/hackers-depot/)
+
+This was a study case for Angular 4.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
